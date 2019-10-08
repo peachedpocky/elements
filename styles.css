@@ -1,0 +1,117 @@
+/* Elements */
+
+body {
+	background-color: black;
+	color: black;
+	font-family: sans-serif;
+	line-height: 0;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+.pacman {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+      width: 0px;
+      height: 0px;
+      border-right: 60px solid transparent;
+      border-top: 60px solid yellow;
+      border-left: 60px solid yellow;
+      border-bottom: 60px solid yellow;
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+    }
+
+.pacman-eye{
+  position: absolute;
+  top: 13%;
+  left: 15%;
+   background-color: black;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  z-index: 1
+}
+ 
+
+ 
+.waka {
+border: none;
+    border-top: 10px dotted white;
+    position: absolute;
+    width: 70%;
+    top: calc(10% + 55px);
+    left: calc(10% + 75px);
+    animation: dots 0.5s infinite linear;
+
+  }
+.gradient {
+  background-color: green;
+  height: 650px;
+  width: 1300px;
+  box-shadow: inset -25px -25px 100px black;
+}
+
+.pacman-container {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 1;
+}
+.pacman-top{
+  background-color:yellow;
+  height:60px;
+  width:120px;
+  border-radius:100px 100px 0 0;
+  animation: spin1 0.5s infinite linear;
+}
+
+.pacman-bottom{
+  background-color:yellow;
+  height:60px;
+  width:120px;
+  border-radius:0 0 100px 100px;
+  animation: spin2 0.5s infinite linear;
+}
+
+@keyframes spin1 {
+  0%  {transform: rotate(0deg);}
+  50%{transform: rotate(-35deg);}
+  
+}
+@keyframes spin2 {
+  0%  {transform: rotate(0deg);}
+  50%{transform: rotate(35deg);}  
+}
+
+@keyframes dots {
+  from { left: calc(10% + 75px); }
+  to {  left: calc(10% + 55px);}
+}
+
+
+.circle{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  border-radius: 50%;
+  animation-name: slide;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  z-index: 2;
+
+}
+
+@keyframes slide {
+  0% {background-color: red; left:0px; top: 0px;}
+  25% {background-color: yellow; left: 200px; top: 0px;}
+  50% {background-color: cyan; left: 200px; top: 200px;}
+  75% {background-color: purple; left: 0px; top: 200px;}
+  100% {background-color: red; left: 0px; top: 0px;}
+}
